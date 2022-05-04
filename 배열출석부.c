@@ -23,6 +23,6 @@ int main(void)
 	    printf("수업 일수 부족입니다.(%.2lf%%)\n", ratio*100);
 	else
 	    printf("수업 일수 충족합니다.(%.2lf%%)\n", 100-(ratio*100) );
-	 
+	
 	return 0;
 }

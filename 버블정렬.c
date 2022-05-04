@@ -3,7 +3,7 @@
 int main(void)
 {
 	int i, k;
-	int list[] = {16,7,9,1,3};
+	int list[] = {56,12,45,60,32,10,100,89,36,25};
 	int len = sizeof(list)/sizeof(list[0]);    //배열의 원소 수 
 	int count = 0;
 	int flag = 0;
@@ -17,14 +17,14 @@ int main(void)
 				list[i] = list[i+1];
 				list[i+1] = tmp;
 				flag=1;
-			}
-		if(flag==0){
-			break;
-		}
+		    }
 		count++;
 		}
+		if(flag==0) {
+			break;
+		}
 	}
-	for (i=0; i<len; i++){
+	 for (i=0; i<len; i++){
 		printf("%d ", list[i]);
 	}
 	

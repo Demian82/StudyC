@@ -5,7 +5,7 @@ int main(void)
 {
 	//int price[SIZE];
 	int price[SIZE] = {56, 12, 45, 60, 32, 10, 100, 89, 36, 25};
-	int i, k, j, tmp, flag, count = 0;
+	int i, j, tmp, flag, count = 0;
 	/*
 	for ( i = 0; i < 10; i++) {
 		printf("가격을 입력하시오 : ");
@@ -14,44 +14,33 @@ int main(void)
 	for ( i = 0; i < SIZE; i++) {
 		printf("가격을 입력하시오 : %d\n", price[i]); 
 	}
-    printf("정렬 전 가격\n");
+    printf("정렬 전 가격\n======================\n");
     
-    for ( k = 0; k<28; k++ )
-	    printf("=");
-	
-	printf("\n");
-    
-	for ( i = 0; i < SIZE; i++) {
+    for ( i = 0; i < SIZE; i++) {
     	printf("%d ", price[i]);
 	}
 	
-	printf("\n정렬 후 가격\n");
+	printf("\n정렬 후 가격\n======================\n");
 	
-	for ( k = 0; k<28; k++ )
-	    printf("=");
-	
-	printf("\n");
-	
-	for ( j = 0; j < SIZE; j++ ) {				// 버블정렬
+	for ( j = 0; j < SIZE; j++ ) {				//bubble array
 		flag = 0;
 		for ( i = 0; i < SIZE-j-1; i++ ){
 			if ( price[i] > price[i+1] ) {
 				tmp = price[i];
 				price[i] = price[i+1];
 				price[i+1] = tmp;
-			flag = 1;			// 이 자리에 flag=1;이 존재하면 count가 7이 된다. 
 			}
-			// 이 자리에 flag=1;이 존재하면 count가 9가 된다. 
+			flag = 1;
 		}
 		if ( flag == 0 )
 		    break;
 		count++;
 	}
 	
-	for ( i = 0; i < 10; i++)			// 버블 정렬된 배열price[] 표시
+	for ( i = 0; i < 10; i++)			//print after array
 	    printf("%d ", price[i]);
 	
-	printf("\n\n정렬횟수 : %d\n", count);			// 정렬 횟수 표시
+	printf("\n\n정렬횟수 : %d\n", count);
 	 
 	return 0;
 }
