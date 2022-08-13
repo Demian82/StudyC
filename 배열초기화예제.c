@@ -6,6 +6,6 @@ int main(void)
 	int len = sizeof(scores)/sizeof(scores[0]);
 	int i;
 	
-	printf("이 배열의 크기는 : %d\n" 
+	printf("이 배열의 크기는 : %d\n" )
 	return 0;
 }
